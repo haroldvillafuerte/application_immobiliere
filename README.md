@@ -5,5 +5,9 @@ Bienvenue, cette application est un estimateur de la valeur immobilière des bie
 
 Le principe de l'apllication est d'utiliser un modèle d'apprentissage entrainé sur les valeurs des 5 dernières années du cadastre de la ville de Saint-Etienne du Rouvray pour estimer le prix d'une future maison ou d'un futur appartement (terrain compris).
 
-![image](https://user-images.githubusercontent.com/58706613/210971890-e9c6182e-8cba-4024-b65e-b5a2eecd8366.png)
-![image](https://user-images.githubusercontent.com/58706613/210972412-9eef386f-b8f1-4c35-af22-8f6c84ed1d8e.png)
+Etape 1: l'acceuil vous présente le projet.
+![ecranAcceuil](https://user-images.githubusercontent.com/58706613/211079329-25ed3f9d-7660-4550-b68d-3e04d4c2b232.png)
+Insérez vos varialbes en fonction de votre recherche :
+![2frag](https://user-images.githubusercontent.com/58706613/211079337-ad1f1834-62df-437a-b9df-3a9b8f2a4b9c.png)
+Etape 3 : Voici votre résultats !
+![Resultat](https://user-images.githubusercontent.com/58706613/211079339-8867cee4-7c74-42a5-95e1-00b42cf3bf46.png)
