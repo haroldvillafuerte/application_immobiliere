@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="#FFC107"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/maison"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:text="@string/button_maison"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/appart"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_appart"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+
+
+
+    <EditText
+        android:id="@+id/surface_réelle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_to_enter2"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="#78909C"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/nombre_piece"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nb_piece"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="#78909C"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/surface_terrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_to_enter1"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="#78909C"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp" />
+
+    <Button
+        android:id="@+id/button_estimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/estimation_button_text"
+
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp" />
+
+    <TextView
+        android:id="@+id/output_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resultat"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp" />
+
+</LinearLayout>
