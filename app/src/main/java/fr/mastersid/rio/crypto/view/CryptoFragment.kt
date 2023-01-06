@@ -62,7 +62,7 @@ class CryptoFragment : Fragment() {
         val outputTextView = view.findViewById<TextView>( R.id.output_textview )
         val button3 = view.findViewById<Button>( R.id.button_estimation )
 
-        //Function for our button
+        //Function for our buttons
         button3.setOnClickListener {
             //In case of some one miss to select a maison ou appartement.
             if (type_local == 0f ){
