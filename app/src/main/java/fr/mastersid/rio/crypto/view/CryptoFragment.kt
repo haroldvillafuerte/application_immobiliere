@@ -47,6 +47,7 @@ class CryptoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val estimationViewModel:EstimationViewModel by viewModels()
 
+        //type_local take the value in function of wich button was clicked
         binding.maison.setOnClickListener {
            type_local = 1.0f
         }
@@ -61,29 +62,32 @@ class CryptoFragment : Fragment() {
         val outputTextView = view.findViewById<TextView>( R.id.output_textview )
         val button3 = view.findViewById<Button>( R.id.button_estimation )
 
+        //Function for our button
         button3.setOnClickListener {
+            //In case of some one miss to select a maison ou appartement.
             if (type_local == 0f ){
                 Toast.makeText( requireContext() , "Sélectionnez un type de logement" , Toast.LENGTH_LONG ).show()
             }
-            // Parse input from inputEditText
+            // Parse inputs from inputEditText
             val inputs1 = type_local.toString().toFloatOrNull()
             val inputs2 = input2.text.toString().toFloatOrNull()
             val inputs3 = input3.text.toString().toFloatOrNull()
             val inputs4 = input4.text.toString().toFloatOrNull()
 
+            //Condition if all the fields are full
             if ( inputs1 != null && inputs2 != null && inputs3 != null && inputs4 != null) {
                 val ortEnvironment = OrtEnvironment.getEnvironment()
                 val ortSession = createORTSession( ortEnvironment )
                 estimationViewModel.runPrediction( inputs1,inputs2,inputs3, inputs4 , ortSession , ortEnvironment )
-
-
             }
             else {
+                //Pop-up if someone miss to fill a field
                 Toast.makeText( requireContext() , "Remplissez bien tout les champs" , Toast.LENGTH_LONG ).show()
             }
         }
         estimationViewModel.estimation_result.observe(viewLifecycleOwner){
             value->
+                //Conditions if someone pick a maison or appartement (depend of the value of type_local)
                 if (type_local == 1.0f ){
                     outputTextView.text = "Estimation de la maison: ${value} €"
                 }
